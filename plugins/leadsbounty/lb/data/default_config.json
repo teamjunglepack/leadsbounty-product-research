@@ -1,0 +1,46 @@
+{
+  "_note": "Leads Bounty Product Research member config. No secrets belong here. Credentials live in environment variables or in your user-level credentials file (see README).",
+  "budget": {
+    "daily_spend_cap_usd": null,
+    "daily_run_cap": 40,
+    "max_concurrent_runs": 2,
+    "max_charge_per_run_usd": 1.0,
+    "confirmed": false
+  },
+  "discovery": {
+    "default_target": 500,
+    "products_per_batch": 40,
+    "low_yield_threshold": 0.15,
+    "low_yield_batches_before_rotate": 2,
+    "shortlist_size": 20,
+    "supplier_results_per_product": 5
+  },
+  "apify": {
+    "actor_id": "apify~e-commerce-scraping-tool",
+    "scrape_mode": "AUTO",
+    "estimated_cost": {
+      "_note": "Estimates only, used when the provider has not reported actual cost. Check your tier on the actor's Apify pricing page.",
+      "per_run_start_usd": 0.0001,
+      "per_product_usd": 0.006
+    },
+    "poll": {"initial_seconds": 10, "max_seconds": 120}
+  },
+  "demand": {
+    "provider": "serpapi_google_trends",
+    "timeframe": "today 12-m",
+    "min_avg_interest": 20,
+    "estimated_cost_per_query_usd": 0.015
+  },
+  "economics": {
+    "_note": "Your COD assumptions. Any null critical value keeps products PENDING. Money in USD per unit.",
+    "confirmation_rate": null,
+    "delivery_rate": null,
+    "delivery_fee_usd": null,
+    "return_cost_usd": null,
+    "fulfillment_fee_usd": null,
+    "shipping_to_country_per_unit_usd": null,
+    "landed_cost_multiplier": 1.0,
+    "price_markup_over_competitor": 1.0
+  },
+  "countries": {}
+}

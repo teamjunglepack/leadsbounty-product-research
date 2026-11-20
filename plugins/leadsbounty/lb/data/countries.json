@@ -1,0 +1,61 @@
+{
+  "_note": "Editable country assumptions. Copied into each member's .leadsbounty/config.json on setup; edit the member copy, not this file. Values marked null must be supplied by the member before products can qualify. Only sources with verified=true are used by default: they are marketplaces in the actor's input-schema enum or the actor's Google search engine mode with this country code.",
+  "LB": {
+    "name": "Lebanon", "aliases": ["lebanon", "lb", "liban", "لبنان"],
+    "currency": "USD", "usd_rate": 1.0, "dialect": "Lebanese Arabic",
+    "min_selling_price_usd": 29,
+    "sources": [
+      {"id": "lb-google", "kind": "search_engine", "countryCode": "lb", "verified": true, "local": true, "label": "Google Shopping (Lebanon)"},
+      {"id": "lb-amazon-ae", "kind": "marketplace", "marketplace": "www.amazon.ae", "verified": true, "local": false, "label": "Amazon UAE (regional)"},
+      {"id": "lb-noon", "kind": "marketplace", "marketplace": "www.noon.com", "verified": true, "local": false, "label": "Noon (regional)"}
+    ],
+    "languages": ["ar", "fr", "en"]
+  },
+  "MA": {
+    "name": "Morocco", "aliases": ["morocco", "ma", "maroc", "المغرب"],
+    "currency": "MAD", "usd_rate": null, "dialect": "Moroccan Darija",
+    "min_selling_price_usd": null,
+    "sources": [
+      {"id": "ma-google", "kind": "search_engine", "countryCode": "ma", "verified": true, "local": true, "label": "Google Shopping (Morocco)"},
+      {"id": "ma-amazon-fr", "kind": "marketplace", "marketplace": "www.amazon.fr", "verified": true, "local": false, "label": "Amazon France (francophone reference)"}
+    ],
+    "languages": ["ar", "fr"]
+  },
+  "SA": {
+    "name": "Saudi Arabia", "aliases": ["saudi", "saudi arabia", "sa", "ksa", "السعودية"],
+    "currency": "SAR", "usd_rate": 0.2667, "dialect": "Saudi (Najdi/Hijazi) Arabic",
+    "min_selling_price_usd": null,
+    "sources": [
+      {"id": "sa-amazon", "kind": "marketplace", "marketplace": "www.amazon.sa", "verified": true, "local": true, "label": "Amazon.sa"},
+      {"id": "sa-noon", "kind": "marketplace", "marketplace": "www.noon.com", "verified": true, "local": true, "label": "Noon"},
+      {"id": "sa-google", "kind": "search_engine", "countryCode": "sa", "verified": true, "local": true, "label": "Google Shopping (Saudi Arabia)"}
+    ],
+    "languages": ["ar", "en"]
+  },
+  "OM": {
+    "name": "Oman", "aliases": ["oman", "om", "عمان", "عُمان"],
+    "currency": "OMR", "usd_rate": 2.6, "dialect": "Omani Gulf Arabic",
+    "min_selling_price_usd": null,
+    "sources": [
+      {"id": "om-google", "kind": "search_engine", "countryCode": "om", "verified": true, "local": true, "label": "Google Shopping (Oman)"},
+      {"id": "om-amazon-ae", "kind": "marketplace", "marketplace": "www.amazon.ae", "verified": true, "local": false, "label": "Amazon UAE (regional)"},
+      {"id": "om-noon", "kind": "marketplace", "marketplace": "www.noon.com", "verified": true, "local": false, "label": "Noon (regional)"}
+    ],
+    "languages": ["ar", "en"]
+  },
+  "_supplier_source": {"id": "supplier-alibaba", "kind": "marketplace", "marketplace": "www.alibaba.com", "verified": true},
+  "_categories": [
+    {"id": "home-organization", "terms": {"en": ["drawer organizer", "space saving rack", "vacuum storage bag"], "ar": ["منظم أدراج", "رف توفير مساحة"], "fr": ["organisateur tiroir", "rangement gain de place"]}},
+    {"id": "kitchen-gadgets", "terms": {"en": ["vegetable chopper", "electric milk frother", "oil sprayer bottle"], "ar": ["قطاعة خضار", "خفاقة حليب كهربائية"], "fr": ["hachoir légumes", "mousseur à lait"]}},
+    {"id": "car-accessories", "terms": {"en": ["car vacuum cleaner", "car seat gap filler", "tire inflator portable"], "ar": ["مكنسة سيارة", "منفاخ إطارات محمول"], "fr": ["aspirateur voiture", "gonfleur pneu portable"]}},
+    {"id": "beauty-tools", "terms": {"en": ["hair straightener brush", "facial cleansing brush", "nail drill electric"], "ar": ["فرشاة فرد الشعر", "فرشاة تنظيف الوجه"], "fr": ["brosse lissante", "brosse nettoyante visage"]}},
+    {"id": "health-massage", "terms": {"en": ["neck massager", "foot massager", "posture corrector"], "ar": ["جهاز مساج الرقبة", "مدلك القدمين", "مصحح وضعية الظهر"], "fr": ["masseur cou", "correcteur de posture"]}},
+    {"id": "cleaning", "terms": {"en": ["electric spin scrubber", "lint remover", "window cleaning robot"], "ar": ["فرشاة تنظيف كهربائية", "مزيل الوبر"], "fr": ["brosse électrique nettoyage", "rasoir anti-bouloches"]}},
+    {"id": "baby-kids", "terms": {"en": ["baby nasal aspirator", "kids drawing tablet", "baby bottle warmer"], "ar": ["شفاط أنف للأطفال", "لوح رسم للأطفال"], "fr": ["mouche bébé électrique", "tablette dessin enfant"]}},
+    {"id": "fitness", "terms": {"en": ["ab roller", "resistance bands set", "smart jump rope"], "ar": ["عجلة تمارين البطن", "حبال مقاومة"], "fr": ["roue abdominale", "bandes de résistance"]}},
+    {"id": "phone-accessories", "terms": {"en": ["magnetic power bank", "phone tripod selfie", "car phone holder"], "ar": ["باور بانك مغناطيسي", "حامل جوال للسيارة"], "fr": ["batterie externe magnétique", "support téléphone voiture"]}},
+    {"id": "pet", "terms": {"en": ["pet hair remover", "automatic pet feeder", "cat water fountain"], "ar": ["مزيل شعر الحيوانات", "وعاء طعام أوتوماتيكي للقطط"], "fr": ["distributeur croquettes", "fontaine à eau chat"]}},
+    {"id": "outdoor", "terms": {"en": ["camping lantern rechargeable", "portable fan neck", "insulated water bottle"], "ar": ["فانوس تخييم", "مروحة رقبة محمولة"], "fr": ["lanterne camping", "ventilateur de cou"]}},
+    {"id": "home-security", "terms": {"en": ["wifi security camera", "smart door lock", "motion sensor light"], "ar": ["كاميرا مراقبة واي فاي", "إضاءة بحساس حركة"], "fr": ["caméra surveillance wifi", "lampe détecteur mouvement"]}}
+  ]
+}
